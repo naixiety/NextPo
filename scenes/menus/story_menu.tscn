@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://cwgvk170ylk4t"]
+
+[ext_resource type="Theme" uid="uid://v2kioenysc6" path="res://themes/main_theme.tres" id="1_1o4ee"]
+[ext_resource type="Texture2D" uid="uid://d03vxqvfalc0g" path="res://assets/backgrounds/bg_main_menu.png" id="2_mjxy8"]
+[ext_resource type="FontFile" uid="uid://b15ooqf78au34" path="res://fonts/BASQUIAT.otf" id="3_wudwk"]
+
+[node name="StoryMenu" type="Control" unique_id=193597381]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1o4ee")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1706030400]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_mjxy8")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=414792144]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuContent" type="VBoxContainer" parent="CenterContainer" unique_id=341012865]
+layout_mode = 2
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="ModeTitle" type="Label" parent="CenterContainer/MenuContent" unique_id=1641849535]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.8666667, 0.26666668, 0.2901961, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_wudwk")
+theme_override_font_sizes/font_size = 120
+text = "STORY MODE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtons" type="VBoxContainer" parent="CenterContainer/MenuContent" unique_id=1713702788]
+custom_minimum_size = Vector2(240, 0)
+custom_maximum_size = Vector2(300, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="NewGameButton" type="Button" parent="CenterContainer/MenuContent/MenuButtons" unique_id=2110864918]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "NEW GAME"
+
+[node name="ContinueButton" type="Button" parent="CenterContainer/MenuContent/MenuButtons" unique_id=2022448700]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "CONTINUE"
+
+[node name="BackButton" type="Button" parent="." unique_id=711071985]
+layout_mode = 1
+offset_right = 46.0
+offset_bottom = 49.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(100, 100)
+offset_transform_visual_only = false
+text = "← BACK"
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="." unique_id=54413975]
+oversampling_override = 1.0
+title = "Start New Game?"
+initial_position = 2
+size = Vector2i(686, 116)
+ok_button_text = "CONTINUE"
+dialog_text = "Your existing Story Mode progress will be overwritten. Continue?"
+dialog_close_on_escape = false

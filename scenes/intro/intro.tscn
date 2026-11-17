@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://uelh6p3uauei"]
+
+[ext_resource type="Theme" uid="uid://v2kioenysc6" path="res://themes/main_theme.tres" id="1_iatiw"]
+[ext_resource type="Script" uid="uid://dkkdijptqkel5" path="res://scenes/intro/intro.gd" id="1_qeukb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iatiw"]
+
+[node name="Intro" type="Control" unique_id=227879808]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_iatiw")
+script = ExtResource("1_qeukb")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1076337820]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07123137, 0.07123139, 0.07123137, 1)
+
+[node name="SceneImage" type="TextureRect" parent="." unique_id=421212492]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NarrationPanel" type="PanelContainer" parent="." unique_id=782875384]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -450.0
+offset_top = -150.0
+offset_right = 450.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_iatiw")
+
+[node name="NarrationText" type="Label" parent="NarrationPanel" unique_id=319440732]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=293011783]
+
+[node name="SkipButton" type="Button" parent="." unique_id=1710364855]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -62.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 51.0
+grow_horizontal = 0
+offset_transform_enabled = true
+offset_transform_visual_only = false
+text = "SKIP"
